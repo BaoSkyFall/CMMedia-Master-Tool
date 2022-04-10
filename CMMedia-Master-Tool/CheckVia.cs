@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CMMedia_Master_Tool
 {
-    public partial class UserControl1 : UserControl
+    public partial class CheckVia : UserControl
     {
-        public UserControl1()
+        public CheckVia()
         {
             InitializeComponent();
         }
