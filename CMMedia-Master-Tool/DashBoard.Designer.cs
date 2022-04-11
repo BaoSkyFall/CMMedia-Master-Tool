@@ -187,8 +187,9 @@
             // 
             this.checkVia1.Location = new System.Drawing.Point(236, 1);
             this.checkVia1.Name = "checkVia1";
-            this.checkVia1.Size = new System.Drawing.Size(773, 518);
+            this.checkVia1.Size = new System.Drawing.Size(1019, 518);
             this.checkVia1.TabIndex = 19;
+            this.checkVia1.Load += new System.EventHandler(this.checkVia1_Load_1);
             // 
             // DashBoard
             // 
@@ -200,6 +201,8 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DashBoard";
             this.Text = "DashBoard";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.DashBoard_FormClosed);
+            this.Load += new System.EventHandler(this.DashBoard_Load);
             this.panel_sidemenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).EndInit();
             this.panel_logo.ResumeLayout(false);

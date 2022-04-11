@@ -7,7 +7,7 @@ using System.Net;
 using System.Text.RegularExpressions;
 using System.Threading;
 
-namespace WinFormsApp
+namespace CMMedia_Master_Tool
 {
     public class AllChrome
     {
@@ -36,6 +36,17 @@ namespace WinFormsApp
             }
             catch { }
             return false; //Lỗi trả kết quả về false!
+        }
+        public static void closeAllChrome()
+        {
+            foreach (var Pross in Process.GetProcessesByName("chrome"))
+            {
+                Pross.Kill();
+            }
+            foreach (var Pross in Process.GetProcessesByName("chromedriver"))
+            {
+                Pross.Kill();
+            }
         }
     }
 }
