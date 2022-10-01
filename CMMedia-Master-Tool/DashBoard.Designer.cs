@@ -31,16 +31,17 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DashBoard));
             this.panel_sidemenu = new System.Windows.Forms.Panel();
             this.panel_tick = new System.Windows.Forms.Panel();
+            this.panel_logo = new System.Windows.Forms.Panel();
+            this.lbl_management = new System.Windows.Forms.Label();
+            this.checkVia1 = new CMMedia_Master_Tool.CheckVia();
             this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuFlatButton4 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.panel_logo = new System.Windows.Forms.Panel();
-            this.lbl_management = new System.Windows.Forms.Label();
             this.pic_store_1 = new System.Windows.Forms.PictureBox();
-            this.checkVia1 = new CMMedia_Master_Tool.CheckVia();
+            this.seeding1 = new CMMedia_Master_Tool.Seeding();
             this.panel_sidemenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
             this.panel_logo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_store_1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,6 +65,35 @@
             this.panel_tick.Name = "panel_tick";
             this.panel_tick.Size = new System.Drawing.Size(10, 58);
             this.panel_tick.TabIndex = 24;
+            // 
+            // panel_logo
+            // 
+            this.panel_logo.Controls.Add(this.lbl_management);
+            this.panel_logo.Controls.Add(this.pic_store_1);
+            this.panel_logo.Location = new System.Drawing.Point(3, 6);
+            this.panel_logo.Name = "panel_logo";
+            this.panel_logo.Size = new System.Drawing.Size(186, 72);
+            this.panel_logo.TabIndex = 16;
+            // 
+            // lbl_management
+            // 
+            this.lbl_management.AutoSize = true;
+            this.lbl_management.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_management.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
+            this.lbl_management.Location = new System.Drawing.Point(54, 24);
+            this.lbl_management.Name = "lbl_management";
+            this.lbl_management.Size = new System.Drawing.Size(126, 25);
+            this.lbl_management.TabIndex = 12;
+            this.lbl_management.Text = "Master Tool";
+            this.lbl_management.Click += new System.EventHandler(this.lbl_management_Click);
+            // 
+            // checkVia1
+            // 
+            this.checkVia1.Location = new System.Drawing.Point(236, 1);
+            this.checkVia1.Name = "checkVia1";
+            this.checkVia1.Size = new System.Drawing.Size(1019, 518);
+            this.checkVia1.TabIndex = 19;
+            this.checkVia1.Load += new System.EventHandler(this.checkVia1_Load_1);
             // 
             // bunifuImageButton2
             // 
@@ -152,27 +182,6 @@
             this.bunifuFlatButton2.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton2.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            // panel_logo
-            // 
-            this.panel_logo.Controls.Add(this.lbl_management);
-            this.panel_logo.Controls.Add(this.pic_store_1);
-            this.panel_logo.Location = new System.Drawing.Point(3, 6);
-            this.panel_logo.Name = "panel_logo";
-            this.panel_logo.Size = new System.Drawing.Size(186, 72);
-            this.panel_logo.TabIndex = 16;
-            // 
-            // lbl_management
-            // 
-            this.lbl_management.AutoSize = true;
-            this.lbl_management.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_management.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
-            this.lbl_management.Location = new System.Drawing.Point(54, 24);
-            this.lbl_management.Name = "lbl_management";
-            this.lbl_management.Size = new System.Drawing.Size(126, 25);
-            this.lbl_management.TabIndex = 12;
-            this.lbl_management.Text = "Master Tool";
-            this.lbl_management.Click += new System.EventHandler(this.lbl_management_Click);
-            // 
             // pic_store_1
             // 
             this.pic_store_1.Image = global::CMMedia_Master_Tool.Properties.Resources.CM_MEDIA;
@@ -183,19 +192,19 @@
             this.pic_store_1.TabIndex = 13;
             this.pic_store_1.TabStop = false;
             // 
-            // checkVia1
+            // seeding1
             // 
-            this.checkVia1.Location = new System.Drawing.Point(236, 1);
-            this.checkVia1.Name = "checkVia1";
-            this.checkVia1.Size = new System.Drawing.Size(1019, 518);
-            this.checkVia1.TabIndex = 19;
-            this.checkVia1.Load += new System.EventHandler(this.checkVia1_Load_1);
+            this.seeding1.Location = new System.Drawing.Point(236, 7);
+            this.seeding1.Name = "seeding1";
+            this.seeding1.Size = new System.Drawing.Size(992, 518);
+            this.seeding1.TabIndex = 20;
             // 
             // DashBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1267, 569);
+            this.Controls.Add(this.seeding1);
             this.Controls.Add(this.checkVia1);
             this.Controls.Add(this.panel_sidemenu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -204,9 +213,9 @@
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.DashBoard_FormClosed);
             this.Load += new System.EventHandler(this.DashBoard_Load);
             this.panel_sidemenu.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).EndInit();
             this.panel_logo.ResumeLayout(false);
             this.panel_logo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_store_1)).EndInit();
             this.ResumeLayout(false);
 
@@ -223,5 +232,6 @@
         private System.Windows.Forms.Label lbl_management;
         private System.Windows.Forms.PictureBox pic_store_1;
         private CheckVia checkVia1;
+        private Seeding seeding1;
     }
 }

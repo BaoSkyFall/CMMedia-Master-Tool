@@ -5,6 +5,10 @@ VisualStudioVersion = 17.1.32328.378
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CMMedia-Master-Tool", "CMMedia-Master-Tool\CMMedia-Master-Tool.csproj", "{31FE990D-90D6-49E2-B689-96E82919E5CD}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChromeReader", "ChromeReader\ChromeReader.csproj", "{20061CC0-A5B0-459C-ADE7-5F356539F737}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CMMediaToolSeeding", "CMMediaToolSeeding\CMMediaToolSeeding.csproj", "{DE9910CB-CE0C-4DF4-8C98-F94CE030D689}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{31FE990D-90D6-49E2-B689-96E82919E5CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{31FE990D-90D6-49E2-B689-96E82919E5CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{31FE990D-90D6-49E2-B689-96E82919E5CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20061CC0-A5B0-459C-ADE7-5F356539F737}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20061CC0-A5B0-459C-ADE7-5F356539F737}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20061CC0-A5B0-459C-ADE7-5F356539F737}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20061CC0-A5B0-459C-ADE7-5F356539F737}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE9910CB-CE0C-4DF4-8C98-F94CE030D689}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE9910CB-CE0C-4DF4-8C98-F94CE030D689}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE9910CB-CE0C-4DF4-8C98-F94CE030D689}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE9910CB-CE0C-4DF4-8C98-F94CE030D689}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
