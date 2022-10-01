@@ -27,6 +27,11 @@ namespace CMMediaToolSeeding
             {
                 MessageBox.Show("Chưa nhập đủ đòi chạy Tool? Bớt Phá đi Ba", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            else if(string.IsNullOrEmpty(txtDelay.Text))
+            {
+                MessageBox.Show("Delay không nhập muốn sập Page hay gì?", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
             else
             {
                 var chromeManager = new ChromeManager();
@@ -156,16 +161,22 @@ namespace CMMediaToolSeeding
             Thread.Sleep(2000); //Chờ sau khi click xong!
             string nameTextControl = "txtComment";
             string namePictureControl = "img";
+            int timeDelay = Int32.Parse(txtDelay.Text) *1000;
             for (int i =1;i<= 20;i++)
             {
                 Control textControl = this.Controls.Find(nameTextControl + i, true)[0];
                 PictureBox pictureControl = (PictureBox)this.Controls.Find(namePictureControl + i, true)[0];
                 if(!string.IsNullOrEmpty(textControl.Text) || pictureControl.ImageLocation != null)
                 {
+                    Thread.Sleep(1000); //Chờ sau khi click xong!
                     commentAction(chromeDriver, textControl.Text, pictureControl.ImageLocation);
 
                 }
             }
+            Thread.Sleep(5000); //Chờ sau khi click xong!
+            CloseBrowser();
+            MessageBox.Show("Kịch bản Seeding đã thực hiện thành Công\n Good job Babe!", "Thành Công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             ///////////////////////Code tiếp check tài nguyên!
 
 
@@ -217,7 +228,8 @@ namespace CMMediaToolSeeding
             }
                catch (Exception)
             {
-                MessageBox.Show("Facebook lag vl không upload hình được. Vui lòng thử lại!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Facebook lag vãi loz không Upload hình được. Vui lòng thử lại nha chế!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                CloseBrowser();
             }
         }
 
@@ -374,6 +386,14 @@ namespace CMMediaToolSeeding
         private void comboBoxUserAgent_SelectedIndexChanged(object sender, EventArgs e)
         {
             txtUID.Text = profileList[comboBoxUserAgent.SelectedIndex].UID;
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }
